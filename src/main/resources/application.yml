@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb # h2 database 連接位址
+    driver-class-name: org.h2.Driver # 配置driver
+    username: sa # database 用戶名
+    password:  # database 密碼
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  # redis
+  redis:
+    database: 0
+    host: localhost
+    port: 6000
+    password: # 預設為空
+    connect-timeout: 5000 # timeout 時間 (毫秒)
